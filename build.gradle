@@ -14,16 +14,6 @@ repositories {
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: "war"
-
-apply plugin: 'jettyEclipse'
-jettyEclipse {
-    automaticReload = true
-    scanIntervalInSeconds = 15
-    httpPort = 9898
-    stopPort = 9899
-    stopKey = 9899
-}
-
 buildDir "target"
 
 dependencies {

@@ -149,6 +149,7 @@ public class MemberController {
         member.setId(id);
         member.setMobile(mobile);
         member.setType((short) type);
+        member.setBrokerType((short) brokerType);
         if (StringUtils.isNotBlank(password)) {
             String passmd5 = MD5Util.MD5(password + mobile);
             member.setPassword(passmd5);

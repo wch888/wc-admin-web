@@ -56,14 +56,14 @@ public class SettingController {
     @RequestMapping(value = "/integration/update")
     public String add(HttpServletRequest request, HttpServletResponse res) {
         String regStr = ServletRequestUtils.getStringParameter(request, "reg","");
-        String clueFail = ServletRequestUtils.getStringParameter(request, "clueFail","");
+        String clueAdd = ServletRequestUtils.getStringParameter(request, "clueAdd","");
         String shareNews = ServletRequestUtils.getStringParameter(request, "shareNews","");
         String shareProduct = ServletRequestUtils.getStringParameter(request, "shareProduct","");
         String verifyHouseHold = ServletRequestUtils.getStringParameter(request, "verifyHouseHold","");
         String login = ServletRequestUtils.getStringParameter(request, "login","");
 
         settingService.update("reg",regStr);
-        settingService.update("clue_fail",clueFail);
+        settingService.update("clue_add",clueAdd);
         settingService.update("share_news",shareNews);
         settingService.update("share_product",shareProduct);
         settingService.update("verifyHouseHold",verifyHouseHold);

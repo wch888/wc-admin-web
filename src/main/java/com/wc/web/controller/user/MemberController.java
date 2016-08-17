@@ -145,10 +145,12 @@ public class MemberController {
         String mobile = ServletRequestUtils.getStringParameter(request, "mobile", "");
         String password = ServletRequestUtils.getStringParameter(request, "password", null);
         int type = ServletRequestUtils.getIntParameter(request, "type", 0);
+        int brokerType = ServletRequestUtils.getIntParameter(request, "brokerType", 0);
         Member member = new Member();
         member.setId(id);
         member.setMobile(mobile);
         member.setType((short) type);
+        member.setBrokerType((short) brokerType);
         if (StringUtils.isNotBlank(password)) {
             String passmd5 = MD5Util.MD5(password + mobile);
             member.setPassword(passmd5);

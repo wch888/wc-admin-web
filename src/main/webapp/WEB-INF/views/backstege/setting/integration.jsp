@@ -20,7 +20,7 @@
             </p>
             <p style="width: 100%;">
                 <label>全民经纪人-提交线索：</label>
-                <input name="clueFail" class="required textInput valid digits" type="text" size="10" value="${clueFail}">
+                <input name="clueAdd" class="required textInput valid digits" type="text" size="10" value="${clueAdd}">
             </p>
             <p style="width: 100%;">
                 <label>分享资讯送积分：</label>

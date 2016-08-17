@@ -104,7 +104,10 @@ public class ClueController {
         clueService.update(clue);
         Long userId = result.getUserId();
         if(null!=userId){
-            walletManger.clueAdd(userId);
+            if(Clue.SUCCESS==clue.getStatus()){
+                walletManger.clueAdd(userId);
+            }
+
         }
 
 

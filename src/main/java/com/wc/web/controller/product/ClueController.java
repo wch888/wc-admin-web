@@ -4,6 +4,7 @@ import com.wc.common.db.PageInfo;
 import com.wc.common.db.PagerControl;
 import com.wc.product.bean.Clue;
 import com.wc.product.service.ClueService;
+import com.wc.web.controller.wallet.WalletManger;
 import com.wc.web.until.StageHelper;
 import com.wc.web.until.WebUtils;
 import org.apache.commons.lang.StringUtils;
@@ -23,7 +24,8 @@ public class ClueController {
 
     @Autowired
     private ClueService clueService;
-
+    @Autowired
+    private WalletManger walletManger;
     @RequestMapping(value = "/list")
     public String list(Model model, HttpServletRequest request) {
         PageInfo pi = WebUtils.getPageInfo(request);
@@ -96,9 +98,16 @@ public class ClueController {
         if (id <= 0) {
             return StageHelper.failForward("参数提交错误", res);
         }
+        Clue result = clueService.getById(id);
         Clue clue = getClue(request);
         clue.setId(id);
         clueService.update(clue);
+        Long userId = result.getUserId();
+        if(null!=userId){
+            walletManger.clueAdd(userId);
+        }
+
+
         return StageHelper.successForward("保存成功","/clue/list", res);
     }
 

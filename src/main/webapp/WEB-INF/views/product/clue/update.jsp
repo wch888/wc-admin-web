@@ -20,11 +20,11 @@
             <div class="unit">
                 <label>状态：</label>
                 <select name="status" id="">
-                    <option value="0"  <c:if test="${e.status ==0}">selected</c:if>>未认领</option>
-                    <option value="1" <c:if test="${e.status ==1}">selected</c:if>>置业顾问跟进中</option>
-                    <option value="2" <c:if test="${e.status ==2}">selected</c:if>>交易成功</option>
-                    <option value="-2" <c:if test="${e.status ==-2}">selected</c:if>>交易失败</option>
-                    <option value="-1" <c:if test="${e.status ==-1}">selected</c:if>>线索无效</option>
+                    <option value="0"  <c:if test="${bean.status ==0}">selected</c:if>>未认领</option>
+                    <option value="1" <c:if test="${bean.status ==1}">selected</c:if>>置业顾问跟进中</option>
+                    <option value="2" <c:if test="${bean.status ==2}">selected</c:if>>交易成功</option>
+                    <option value="-2" <c:if test="${bean.status ==-2}">selected</c:if>>交易失败</option>
+                    <option value="-1" <c:if test="${bean.status ==-1}">selected</c:if>>线索无效</option>
                 </select>
             </div>
             <p style="width: 100%;">

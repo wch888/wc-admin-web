@@ -103,7 +103,7 @@ public class ClueController {
         clue.setId(id);
         clueService.update(clue);
         Long userId = result.getUserId();
-        if(null!=userId){
+        if(null!=userId&&Clue.SUCCESS!=result.getStatus()){
             if(Clue.SUCCESS==clue.getStatus()){
                 walletManger.clueAdd(userId);
             }

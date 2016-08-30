@@ -44,7 +44,7 @@ public class SettingController {
         String login = settingService.getString("login","0");
 
         model.addAttribute("reg",reg);
-        model.addAttribute("clueFail",clue_fail);
+        model.addAttribute("clueAdd",clue_fail);
         model.addAttribute("shareNews",share_news);
         model.addAttribute("shareProduct",share_product);
         model.addAttribute("verifyHouseHold",verifyHouseHold);

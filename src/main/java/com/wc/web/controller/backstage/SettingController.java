@@ -37,7 +37,7 @@ public class SettingController {
     public String integration(Model model, HttpServletRequest request) {
 
         String reg = settingService.getString("reg","0");
-        String clue_fail = settingService.getString("clue_fail","0");
+        String clue_fail = settingService.getString("clue_add","0");
         String share_news = settingService.getString("share_news","0");
         String share_product = settingService.getString("share_product","0");
         String verifyHouseHold = settingService.getString("verifyHouseHold","0");
